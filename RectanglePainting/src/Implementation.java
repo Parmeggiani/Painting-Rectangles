@@ -12,6 +12,7 @@ public class Implementation {
         arq.readFile();
         colors = arq.getColors();
         coordinates = arq.getCoordinates();
+        System.out.println(coordinates.get(0)[0]+" "+coordinates.get(0)[1]+" "+coordinates.get(0)[2]+" "+coordinates.get(0)[3]);
     }
 
     private int calculateArea(int x1, int y1, int x2, int y2){
