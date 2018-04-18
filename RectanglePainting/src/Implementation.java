@@ -227,18 +227,18 @@ public class Implementation {
 
         }
 
-        System.out.println("A area total da cor Amarela é: "+verdeC);
-        System.out.println("A area total da cor Amarela é: "+vermelho);
-        System.out.println("A area total da cor Amarela é: "+azulC);
-        System.out.println("A area total da cor Amarela é: "+amarelo);
-        System.out.println("A area total da cor Amarela é: "+verdeE);
-        System.out.println("A area total da cor Amarela é: "+marrom);
-        System.out.println("A area total da cor Amarela é: "+azulE);
-        System.out.println("A area total da cor Amarela é: "+cinza);
-        System.out.println("A area total da cor Amarela é: "+dourado);
-        System.out.println("A area total da cor Amarela é: "+violeta);
-        System.out.println("A area total da cor Amarela é: "+preto);
-        System.out.println("A area total da cor Amarela é: "+laranja);
+        System.out.println("A area total da cor verde-claro é: "+verdeC);
+        System.out.println("A area total da cor vermelho é: "+vermelho);
+        System.out.println("A area total da cor azul-claro é: "+azulC);
+        System.out.println("A area total da cor amarela é: "+amarelo);
+        System.out.println("A area total da cor verde-escuro é: "+verdeE);
+        System.out.println("A area total da cor marrom é: "+marrom);
+        System.out.println("A area total da cor azul-escuro é: "+azulE);
+        System.out.println("A area total da cor cinza é: "+cinza);
+        System.out.println("A area total da cor dourado é: "+dourado);
+        System.out.println("A area total da cor violeta é: "+violeta);
+        System.out.println("A area total da cor preto é: "+preto);
+        System.out.println("A area total da cor laranja é: "+laranja);
 
 
     }
