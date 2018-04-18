@@ -28,7 +28,8 @@ public class Implementation {
     }
 
     public void addArea(){
-        int x1, y1, x2, y2; long areaAux;
+        int x1, y1, x2, y2;
+        long areaAux;
 
         for(int i=0; i<colors.size(); i++){
             x1=coordinates.get(i)[0];
@@ -42,23 +43,11 @@ public class Implementation {
     }
 
     public void testNegativeAreas(){
-        long zero =0;
         for(int i=0; i<colors.size(); i++){
-            if(areas.get(i)<zero){
-                areas.set(i, zero);
+            if(areas.get(i)<0){
+                areas.set(i, (long)0);
             }
         }
-    }
-
-    public void testa(){
-        long verdeE=0;
-        for(int i=0; i<colors.size(); i++) {
-
-            if ("verde-escuro".equals(colors.get(i))) {
-                verdeE = verdeE + areas.get(i);
-            }
-        }
-        System.out.println("Area de Verde-Escura: "+verdeE);
     }
 
     public void overlappingRectangles(){
@@ -150,8 +139,7 @@ public class Implementation {
 
                 if(x1>=auxX1 && x2<=auxX2 &&
                         y1>=auxY1 && y2<=auxY2){
-                    long zero=0;
-                    areas.set(i, zero);
+                    areas.set(i, (long)0);
                     break;
                     //11
                 }
@@ -215,7 +203,6 @@ public class Implementation {
                 amarelo = amarelo + areas.get(i);
             }
             if("verde-escuro".equals(colors.get(i))){
-                System.out.println("aqui");
                 verdeE = verdeE + areas.get(i);
             }
             if("marrom".equals(colors.get(i))){
