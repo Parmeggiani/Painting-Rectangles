@@ -7,12 +7,12 @@ public class Implementation {
     ArrayList<Integer[]> coordinates = new ArrayList();
     ArrayList<Long> areas = new ArrayList();
 
-    public void initializesRectangles() throws FileNotFoundException {
+    public void initializesRectanglesAndAreas() throws FileNotFoundException {
         FileReading arq = new FileReading();
         arq.readFile();
         colors = arq.getColors();
         coordinates = arq.getCoordinates();
-        //System.out.println(coordinates.get(0)[0]+" "+coordinates.get(0)[1]+" "+coordinates.get(0)[2]+" "+coordinates.get(0)[3]);
+        addArea();
     }
 
     private long calculateArea(int x1, int y1, int x2, int y2){
@@ -27,22 +27,20 @@ public class Implementation {
         areas.set(index, newArea);
     }
 
-    public void addArea(){
+    private void addArea(){
         int x1, y1, x2, y2;
-        long areaAux;
 
         for(int i=0; i<colors.size(); i++){
             x1=coordinates.get(i)[0];
             y1=coordinates.get(i)[1];
             x2=coordinates.get(i)[2];
             y2=coordinates.get(i)[3];
-            areaAux=calculateArea(x1,y1,x2,y2);
-            areas.add(areaAux);
+            areas.add( calculateArea(x1,y1,x2,y2) );
         }
 
     }
 
-    public void testNegativeAreas(){
+    private void testNegativeAreas(){
         for(int i=0; i<colors.size(); i++){
             if(areas.get(i)<0){
                 areas.set(i, (long)0);
@@ -56,10 +54,6 @@ public class Implementation {
 
 
         for(int i=0;i<colors.size();i++){
-
-            int cont1=0, cont2=0, cont3=0, cont4=0, cont5=0, cont6=0, cont7=0, cont8=0,
-                    cont9=0, cont10=0, cont12=0, cont13=0, cont14=0, cont15=0, cont16=0;
-
             x1=coordinates.get(i)[0];
             y1=coordinates.get(i)[1];
             x2=coordinates.get(i)[2];
@@ -221,9 +215,11 @@ public class Implementation {
 
     }
 
-    public void printColors(){
+    public void printColorsTotalAreas(){
         long verdeC=0, vermelho=0, azulC=0, amarelo=0, verdeE=0, marrom=0,
                 azulE=0, cinza=0, dourado=0, violeta=0, preto=0, laranja = 0;
+
+        testNegativeAreas();
 
         for(int i=0; i<colors.size(); i++){
 

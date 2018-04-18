@@ -8,11 +8,9 @@ public class PaintRectangles {
 
         long inicio = System.currentTimeMillis();
 
-        imple.initializesRectangles();
-        imple.addArea();
+        imple.initializesRectanglesAndAreas();
         imple.overlappingRectangles();
-        imple.testNegativeAreas();
-        imple.printColors();
+        imple.printColorsTotalAreas();
 
         long fim  = System.currentTimeMillis();
 
