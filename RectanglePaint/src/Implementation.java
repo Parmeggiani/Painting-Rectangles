@@ -54,7 +54,12 @@ public class Implementation {
         int x1, y1, x2, y2;
         int auxX1, auxY1, auxX2, auxY2;
 
+
         for(int i=0;i<colors.size();i++){
+
+            int cont1=0, cont2=0, cont3=0, cont4=0, cont5=0, cont6=0, cont7=0, cont8=0,
+                    cont9=0, cont10=0, cont12=0, cont13=0, cont14=0, cont15=0, cont16=0;
+
             x1=coordinates.get(i)[0];
             y1=coordinates.get(i)[1];
             x2=coordinates.get(i)[2];
@@ -67,28 +72,37 @@ public class Implementation {
 
                 if(x1<auxX1 && x2>auxX1 && x2<=auxX2 &&
                         y1>=auxY1 && y2>auxY2 && y1<auxY2){
+
                     decreaseArea(i, auxX1, y1, x2, auxY2);
+
                     continue;
                     //1
                 }
 
                 if(x1<auxX1 && x2>auxX1 && x2<=auxX2 &&
                         y1<auxY1 && y2>auxY2){
+
                     decreaseArea(i, auxX1, auxY1, x2, auxY2);
+
                     continue;
                     //2
                 }
 
                 if(x1<auxX1 && x2>auxX1 && x2<=auxX2 &&
                         y1>=auxY1 && y2<=auxY2){
+
                     decreaseArea(i, auxX1, y1, x2, y2);
+
+
                     continue;
                     //3
                 }
 
                 if(x1<auxX1 && x2>auxX1 && x2<=auxX2 &&
                         y1<auxY1 && y2<=auxY2 && y2>auxY1){
+
                     decreaseArea(i, auxX1, auxY1, x2, y2);
+
                     continue;
                     //4
                 }
@@ -96,28 +110,37 @@ public class Implementation {
 
                 if(x1<auxX1 && x2>auxX1 && x1>=auxX1 &&
                         y1>=auxY1 && y2>auxY2 && y1<auxY2){
+
                     decreaseArea(i, x1, y1, auxX2, auxY2);
+
                     continue;
                     //5
                 }
 
                 if(x1<auxX1 && x2>auxX1 && x1>=auxX1 &&
                         y1<auxY1 && y2>auxY2){
+
                     decreaseArea(i, x1, auxY1, auxX2, auxY2);
+
+
                     continue;
                     //6
                 }
 
                 if(x1<auxX1 && x2>auxX1 && x1>=auxX1 &&
                         y1>=auxY1 && y2<=auxY2){
+
                     decreaseArea(i, x1, y1, auxX2, y2);
+
                     continue;
                     //7
                 }
 
                 if(x1<auxX1 && x2>auxX1 && x1>=auxX1 &&
                         y1<auxY1 && y2<=auxY2 && y2>auxY1){
+
                     decreaseArea(i, x1, auxY1, auxX2, y2);
+
                     continue;
                     //8
                 }
@@ -125,14 +148,18 @@ public class Implementation {
 
                 if(x1>=auxX1 && x2<=auxX2 &&
                         y1>=auxY1 && y2>auxY2 && y1<auxY2){
+
                     decreaseArea(i, x1, y1, x2, auxY2);
+
                     continue;
                     //9
                 }
 
                 if(x1>=auxX1 && x2<=auxX2 &&
                         y1<auxY1 && y2>auxY2){
+
                     decreaseArea(i, x1, auxY1, x2, auxY2);
+
                     continue;
                     //10
                 }
@@ -146,7 +173,9 @@ public class Implementation {
 
                 if(x1>=auxX1 && x2<=auxX2 &&
                         y1<auxY1 && y2<=auxY2 && y2>auxY1){
-                    decreaseArea(i, x1, auxY1,x2, y2);
+
+                    decreaseArea(i, x1, auxY1, x2, y2);
+
                     continue;
                     //12
                 }
@@ -154,32 +183,40 @@ public class Implementation {
 
                 if(x1<auxX1 && x2>auxX2 &&
                         y1>=auxY1 && y2>auxY2 && y1<auxY2){
+
                     decreaseArea(i, auxX1, y1, auxX2, auxY2);
+
                     continue;
                     //13
                 }
 
                 if(x1<auxX1 && x2>auxX2 &&
                         y1<auxY1 && y2>auxY2){
+
                     decreaseArea(i, auxX1, auxY1, auxX2, auxY2);
+
                     continue;
                     //14
                 }
 
                 if(x1<auxX1 && x2>auxX2 &&
                         y1>=auxY1 && y2<=auxY2){
+
                     decreaseArea(i, auxX1, y1, auxX2, y2);
+
                     continue;
                     //15
                 }
 
                 if(x1<auxX1 && x2>auxX2 &&
                         y1<auxY1 && y2<=auxY2 && y2>auxY1){
+
                     decreaseArea(i, auxX1, auxY1, auxX2, y2);
+
                     //16
                 }
-
             }
+
         }
 
     }
